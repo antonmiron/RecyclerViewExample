@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="person"
+            type="com.example.recyclerviewexample.models.Person" />
+    </data>
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/recycler_item_margin"
+    android:layout_marginStart="@dimen/recycler_item_margin"
+    android:layout_marginTop="@dimen/recycler_item_margin">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/recycler_item_margin">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:text="@{person.name}"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@{@string/person_age(person.age)}"/>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
+</layout>
